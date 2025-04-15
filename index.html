@@ -3,167 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transformación digital con gemelos digitales: optimización de procesos con BPMN, IoT, Power BI y FlexSim. Descubre cómo reducir costos y mejorar eficiencia.">
-    <meta name="author" content="Tu Empresa">
-    <title>Transformación Digital con Gemelos Digitales</title>
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>hatten.io | Under Construction</title>
+    <meta name="description" content="hatten.io - Coming Soon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-95 backdrop-blur-md z-50 shadow-lg">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="logo">
-                <img src="assets/media/images/hero-bg.jpg" alt="Logo de Tu Empresa" class="h-12 w-auto transition-transform hover:scale-105">
-            </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#problema" class="text-gray-300 hover:text-white transition-colors">Problema</a>
-                <a href="#solucion" class="text-gray-300 hover:text-white transition-colors">Solución</a>
-                <a href="#casos" class="text-gray-300 hover:text-white transition-colors">Casos</a>
-                <a href="#beneficios" class="text-gray-300 hover:text-white transition-colors">Beneficios</a>
-                <a href="#contacto" class="text-gray-300 hover:text-white transition-colors">Contacto</a>
-            </nav>
-            <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
+<body>
+    <div class="container">
+        <div class="logo">hatten.io</div>
+        <h1 class="title">Under Construction</h1>
+        <p class="subtitle">We're building something amazing. Stay tuned!</p>
+        <div class="progress-bar">
+            <div class="progress"></div>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover opacity-90">
-            <source src="assets/media/video/hero-video.webm" type="video/webm">
-            <source src="assets/media/video/hero-video.mp4" type="video/mp4">
-            <img src="assets/media/images/hero-fallback.jpg" alt="Fondo tecnológico">
-        </video>
-        <div class="relative z-10 text-center px-6">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">Reducción de costos garantizada con gemelos digitales</h1>
-            <p class="text-xl md:text-2xl text-gray-300">Optimiza procesos en <strong class="text-blue-400">4 semanas</strong></p>
+        <div class="counter">
+            <span id="days">00</span>d : 
+            <span id="hours">00</span>h : 
+            <span id="minutes">00</span>m : 
+            <span id="seconds">00</span>s
         </div>
-    </section>
+    </div>
 
-    <!-- Sección: Problema -->
-    <section id="problema" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">El Problema: Ineficiencias en Procesos</h2>
-            <ul class="max-w-2xl mx-auto text-lg text-gray-300 space-y-4">
-                <li>Desperdicio de recursos y tiempo.</li>
-                <li>Falta de datos precisos para decisiones estratégicas.</li>
-                <li>Baja eficiencia operativa y altos costos.</li>
-            </ul>
-            <div class="text-center mt-8">
-                <a href="#solucion" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">Descubre Nuestra Solución</a>
-            </div>
-        </div>
-    </section>
+    <!-- Efecto de partículas -->
+    <canvas id="particles"></canvas>
 
-    <!-- Sección: Solución -->
-    <section id="solucion" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Nuestra Solución: Gemelos Digitales</h2>
-            <img src="assets/media/images/banner_1.png" alt="Modelado de procesos digitales con gemelos digitales" class="w-full h-64 md:h-96 object-cover rounded-lg mb-8">
-            <ul class="max-w-2xl mx-auto text-lg text-gray-300 space-y-4">
-                <li>Modelado con BPMN.</li>
-                <li>Integración IoT para datos en tiempo real.</li>
-                <li>Análisis con Power BI.</li>
-                <li>Simulación de escenarios con FlexSim.</li>
-            </ul>
-            <div class="text-center mt-8">
-                <a href="#casos" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">Más soluciones</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección: Casos de Éxito -->
-    <section id="casos" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Casos de Éxito</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Caso 1 -->
-                <article class="relative h-96 rounded-lg overflow-hidden group">
-                    <img src="assets/media/images/caso_1.png" alt="Optimización de Producción en fábrica de automóviles" class="absolute inset-0 w-full h-full object-cover transition-opacity group-hover:opacity-0">
-                    <img src="assets/media/images/caso_1_hover.png" alt="Optimización de Producción en fábrica de automóviles (hover)" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 p-6 flex flex-col justify-end">
-                        <h3 class="text-2xl font-bold text-white">Optimización de Producción</h3>
-                        <p class="text-gray-300">Redujimos tiempos de inactividad en un 30% para una fábrica de automóviles.</p>
-                    </div>
-                </article>
-                <!-- Caso 2 -->
-                <article class="relative h-96 rounded-lg overflow-hidden group">
-                    <img src="assets/media/images/caso_2.png" alt="Mejoras en Logística de entrega" class="absolute inset-0 w-full h-full object-cover transition-opacity group-hover:opacity-0">
-                    <img src="assets/media/images/caso_2_hover.png" alt="Mejoras en Logística de entrega (hover)" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 p-6 flex flex-col justify-end">
-                        <h3 class="text-2xl font-bold text-white">Mejoras en Logística</h3>
-                        <p class="text-gray-300">Optimizamos rutas de entrega, reduciendo costos en un 20%.</p>
-                    </div>
-                </article>
-                <!-- Caso 3 -->
-                <article class="relative h-96 rounded-lg overflow-hidden group">
-                    <img src="assets/media/images/caso_3.png" alt="Automatización de Procesos industriales" class="absolute inset-0 w-full h-full object-cover transition-opacity group-hover:opacity-0">
-                    <img src="assets/media/images/caso_3_hover.png" alt="Automatización de Procesos industriales (hover)" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 p-6 flex flex-col justify-end">
-                        <h3 class="text-2xl font-bold text-white">Automatización de Procesos</h3>
-                        <p class="text-gray-300">Implementamos sistemas que aumentaron la eficiencia en un 40%.</p>
-                    </div>
-                </article>
-                <!-- Caso 4 -->
-                <article class="relative h-96 rounded-lg overflow-hidden group">
-                    <img src="assets/media/images/caso_4.png" alt="Gestión de Inventarios en almacén" class="absolute inset-0 w-full h-full object-cover transition-opacity group-hover:opacity-0">
-                    <img src="assets/media/images/caso_4_hover.png" alt="Gestión de Inventarios en almacén (hover)" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 p-6 flex flex-col justify-end">
-                        <h3 class="text-2xl font-bold text-white">Gestión de Inventarios</h3>
-                        <p class="text-gray-300">Redujimos pérdidas por inventario en un 25%.</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección: Contacto -->
-    <section id="contacto" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">¡Empieza la Transformación Digital Hoy!</h2>
-            <form class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-lg">
-                <input type="text" name="nombre" placeholder="Ej: Juan Pérez" class="w-full p-3 mb-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <input type="email" name="email" placeholder="Ej: juan@empresa.com" class="w-full p-3 mb-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" class="w-full p-3 mb-4 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="5"></textarea>
-                <input type="hidden" name="honeypot">
-                <button type="submit" class="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-12">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-xl font-bold mb-4">Contacto</h3>
-                <p class="text-gray-300">Email: info@empresa.com</p>
-                <p class="text-gray-300">Teléfono: +39 62 706 6126</p>
-                <p class="text-gray-300">Dirección: Madrid, España</p>
-            </div>
-            <div class="border-l border-gray-700 pl-8">
-                <h3 class="text-xl font-bold mb-4">Legal</h3>
-                <a href="/politica-privacidad" class="block text-gray-300 hover:text-white transition-colors">Política de Privacidad</a>
-                <a href="/aviso-legal" class="block text-gray-300 hover:text-white transition-colors">Aviso Legal</a>
-                <a href="/terminos-servicio" class="block text-gray-300 hover:text-white transition-colors">Términos de Servicio</a>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Síguenos</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="assets/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
