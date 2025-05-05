@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Space Grotesk', sans-serif;
-    background: #0f0f1a;
-    color: #fff;
+    background: #1B1E28; /* Raisin Black */
+    color: #FFFFFF;
     overflow: hidden;
     height: 100vh;
     display: flex;
@@ -25,13 +25,13 @@ body {
     font-size: 5rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: #6c63ff;
+    color: #5ABF92; /* Mint */
 }
 
 .title {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #6c63ff, #ff6b6b);
+    background: linear-gradient(90deg, #5ABF92, #6C6E78); /* Mint to Gray */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -40,8 +40,9 @@ body {
 
 .subtitle {
     font-size: 1.2rem;
-    opacity: 0.8;
+    opacity: 0.9;
     margin-bottom: 2rem;
+    color: #6C6E78; /* Soft Gray */
     animation: fadeIn 2.5s ease-in-out;
 }
 
@@ -49,7 +50,7 @@ body {
     width: 100%;
     max-width: 400px;
     height: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #192C44; /* Dark Blue */
     border-radius: 10px;
     margin: 2rem auto;
     overflow: hidden;
@@ -58,7 +59,7 @@ body {
 .progress {
     height: 100%;
     width: 0;
-    background: linear-gradient(90deg, #6c63ff, #ff6b6b);
+    background: linear-gradient(90deg, #5ABF92, #6C6E78); /* Mint to Gray */
     border-radius: 10px;
     animation: progressAnimation 3s infinite ease-in-out;
 }
@@ -72,7 +73,7 @@ body {
 }
 
 .counter span {
-    background: rgba(255, 255, 255, 0.1);
+    background: #192C44;
     padding: 0.5rem 1rem;
     border-radius: 8px;
 }
