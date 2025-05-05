@@ -1,139 +1,193 @@
+:root {
+  /* Variables de color Hatten */
+  --raising-black: #1b1e28;
+  --dim-gray: #6c6e7b;
+  --white: #fff;
+  --prussian-blue: #192C44;
+  --mint: #5ABF92;
+  
+  /* Variables de animación */
+  --animation-duration: 0.3s;
+  --animation-easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Space Grotesk', sans-serif;
-    background: #1B1E28; /* Raisin Black */
-    color: #FFFFFF;
-    overflow: hidden;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--raising-black);
+  color: var(--white);
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-    text-align: center;
-    z-index: 10;
-    padding: 2rem;
+  text-align: center;
+  z-index: 10;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-    font-size: 5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #5ABF92; /* Mint */
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--mint);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .title {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(90deg, #5ABF92, #6C6E78); /* Mint to Gray */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: fadeIn 2s ease-in-out;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--mint), var(--dim-gray));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: fadeIn 2s var(--animation-easing) forwards;
+  line-height: 1.2;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-bottom: 2rem;
-    color: #6C6E78; /* Soft Gray */
-    animation: fadeIn 2.5s ease-in-out;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  color: var(--dim-gray);
+  animation: fadeIn 2.5s var(--animation-easing) forwards;
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
 }
 
 .progress-bar {
-    width: 100%;
-    max-width: 400px;
-    height: 8px;
-    background: #192C44; /* Dark Blue */
-    border-radius: 10px;
-    margin: 2rem auto;
-    overflow: hidden;
+  width: 100%;
+  height: 8px;
+  background: var(--prussian-blue);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .progress {
-    height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, #5ABF92, #6C6E78); /* Mint to Gray */
-    border-radius: 10px;
-    animation: progressAnimation 3s infinite ease-in-out;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--mint), var(--dim-gray));
+  border-radius: 10px;
+  animation: progressAnimation 3s infinite var(--animation-easing);
+  transition: width 0.3s ease;
 }
 
 .counter {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1.5rem;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .counter span {
-    background: #192C44;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+  background: var(--prussian-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform var(--animation-duration) ease;
+  color: var(--white);
+}
+
+.counter span:hover {
+  transform: translateY(-2px);
 }
 
 canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
+/* Animaciones */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
 @keyframes progressAnimation {
-    0% { width: 0%; }
-    50% { width: 100%; }
-    100% { width: 0%; }
+  0% { 
+    width: 0%; 
+    opacity: 0.8;
+  }
+  50% { 
+    width: 100%; 
+    opacity: 1;
+  }
+  100% { 
+    width: 0%; 
+    opacity: 0.8;
+  }
 }
 
-/* ===== RESPONSIVE PARA MÓVILES ===== */
-@media (max-width: 768px) {
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .title {
-        font-size: 2.5rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-
-    .counter {
-        flex-direction: row;
-        flex-wrap: wrap;
-        font-size: 1.2rem;
-        gap: 0.5rem;
-    }
-
-    .counter span {
-        padding: 0.3rem 0.6rem;
-    }
-
-    .progress-bar {
-        max-width: 80%;
-    }
+/* Efectos de hover y focus para accesibilidad */
+@media (hover: hover) {
+  .counter span:hover {
+    background-color: rgba(25, 44, 68, 0.8);
+  }
 }
 
+/* Modo de alto contraste para accesibilidad */
+@media (prefers-contrast: more) {
+  :root {
+    --raising-black: #000;
+    --white: #FFF;
+  }
+  
+  .title {
+    background: none;
+    color: var(--white);
+  }
+  
+  .progress {
+    background: var(--white);
+  }
+}
+
+/* Responsive */
 @media (max-width: 480px) {
-    .title {
-        font-size: 2rem;
-    }
-
-    .counter {
-        font-size: 1rem;
-    }
+  .container {
+    padding: 1rem;
+  }
+  
+  .counter {
+    gap: 0.5rem;
+  }
+  
+  .counter span {
+    padding: 0.3rem 0.6rem;
+  }
 }
