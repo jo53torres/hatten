@@ -154,7 +154,7 @@
 
    // Cuenta regresiva al 15 de mayo de 2025
         function updateCountdown() {
-            const targetDate = new Date('2025-05-15T00:00:00');
+            const targetDate = new Date('2025-05-19T00:00:00');
             const now = new Date();
             const diff = targetDate - now;
             
